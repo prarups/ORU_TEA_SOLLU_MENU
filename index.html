@@ -11,29 +11,47 @@
         html { scroll-behavior: smooth; }
         body { 
             font-family: 'Plus Jakarta Sans', sans-serif; 
-            background-color: #000000; /* Changed to Black */
-            color: #eeeeee; /* Changed to Light for readability */
+            background-color: #000000; 
+            color: #eeeeee; 
         }
         .menu-card {
-            background: rgba(25, 25, 25, 0.98); /* Dark Card Background */
+            background: rgba(25, 25, 25, 0.98); 
             border-radius: 20px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-            scroll-margin-top: 100px;
+            scroll-margin-top: 180px; /* Adjusted for taller wrapped nav */
         }
         .category-nav {
             position: sticky; top: 0; z-index: 100;
-            background: rgba(10, 10, 10, 0.9); /* Dark Nav */
+            background: rgba(10, 10, 10, 0.95); 
             backdrop-filter: blur(15px);
             border-bottom: 1px solid rgba(255,255,255,0.05);
         }
-        .cat-item {
-            flex: 1 1 auto; min-width: 70px;
-            display: flex; flex-direction: column; align-items: center;
-            padding: 10px 5px; border-radius: 12px; transition: all 0.2s;
-            background: rgba(255, 255, 255, 0.05); /* Subtle dark button */
+        
+        /* FIXED CATEGORY BUTTONS FOR MOBILE */
+        .nav-container {
+            display: flex;
+            flex-wrap: wrap; /* Allows buttons to wrap to next line */
+            justify-content: center;
+            gap: 8px;
+            padding: 10px 5px;
         }
-        /* Specific label colors for category nav to keep them visible on black */
-        .cat-item span { font-size: 8px; font-weight: 800; text-transform: uppercase; margin-top: 4px; }
+
+        .cat-item {
+            flex: 0 1 calc(33.33% - 12px); /* Shows 3 per row on mobile */
+            min-width: 80px;
+            display: flex; flex-direction: column; align-items: center;
+            padding: 12px 5px; border-radius: 12px; transition: all 0.2s;
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        @media (min-width: 768px) {
+            .cat-item {
+                flex: 0 1 auto;
+                min-width: 100px;
+            }
+        }
+        
+        .cat-item span { font-size: 9px; font-weight: 800; text-transform: uppercase; margin-top: 6px; }
         
         .price-tag { color: #f97316; font-weight: 800; font-size: 0.95rem; }
         .item-row { 
@@ -52,7 +70,6 @@
             background: rgba(255, 255, 255, 0.05); border: 1px dashed rgba(255,255,255,0.2);
             border-radius: 16px; padding: 15px; margin-bottom: 12px;
         }
-        /* Text color overrides for categories against dark background */
         .text-gray-500 { color: #9ca3af !important; }
         .text-gray-400 { color: #9ca3af !important; }
     </style>
@@ -65,22 +82,18 @@
             <div class="absolute inset-0 bg-black/70 mix-blend-multiply"></div>
         </div>
        <div class="relative z-10 text-white mt-8">
-    <div class="flex items-center justify-center gap-4 mb-2">
-        <div class="h-[1px] w-8 bg-gradient-to-r from-transparent to-orange-500"></div>
-        <p class="text-orange-500 text-[16px] md:text-[18px] uppercase tracking-[0.8em] font-black italic">
-            MENU
-        </p>
-        <div class="h-[1px] w-8 bg-gradient-to-l from-transparent to-orange-500"></div>
-    </div>
-    <p class="text-gray-400 text-[10px] uppercase tracking-[0.3em] font-medium">
-        Select a category to explore
-    </p>
-</div>
+            <div class="flex items-center justify-center gap-4 mb-2">
+                <div class="h-[1px] w-8 bg-gradient-to-r from-transparent to-orange-500"></div>
+                <p class="text-orange-500 text-[16px] md:text-[18px] uppercase tracking-[0.8em] font-black italic">MENU</p>
+                <div class="h-[1px] w-8 bg-gradient-to-l from-transparent to-orange-500"></div>
+            </div>
+            <p class="text-gray-400 text-[10px] uppercase tracking-[0.3em] font-medium">Select a category to explore</p>
+        </div>
     </header>
 
-    <nav class="category-nav p-2 shadow-sm overflow-x-auto">
-        <div class="flex justify-start md:justify-center gap-2 max-w-6xl mx-auto">
-            <a href="#hot" class="cat-item text-orange-400"><i class="fas fa-mug-hot"></i><span>Hot</span></a>
+    <nav class="category-nav shadow-lg">
+        <div class="nav-container max-w-6xl mx-auto">
+            <a href="#hot" class="cat-item text-orange-400"><i class="fas fa-mug-hot"></i><span>Hot Beverages</span></a>
             <a href="#juice" class="cat-item text-green-400"><i class="fas fa-leaf"></i><span>Juice</span></a>
             <a href="#mojito" class="cat-item text-blue-400"><i class="fas fa-glass-martini-alt"></i><span>Mojitos</span></a>
             <a href="#shakes" class="cat-item text-pink-400"><i class="fas fa-ice-cream"></i><span>Shakes</span></a>
