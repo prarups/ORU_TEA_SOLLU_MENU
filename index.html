@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oru Tea Sollu - Full Official Menu</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        html { scroll-behavior: smooth; }
+        body { 
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+            background-color: #000000; /* Changed to Black */
+            color: #eeeeee; /* Changed to Light for readability */
+        }
+        .menu-card {
+            background: rgba(25, 25, 25, 0.98); /* Dark Card Background */
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            scroll-margin-top: 100px;
+        }
+        .category-nav {
+            position: sticky; top: 0; z-index: 100;
+            background: rgba(10, 10, 10, 0.9); /* Dark Nav */
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+        .cat-item {
+            flex: 1 1 auto; min-width: 70px;
+            display: flex; flex-direction: column; align-items: center;
+            padding: 10px 5px; border-radius: 12px; transition: all 0.2s;
+            background: rgba(255, 255, 255, 0.05); /* Subtle dark button */
+        }
+        /* Specific label colors for category nav to keep them visible on black */
+        .cat-item span { font-size: 8px; font-weight: 800; text-transform: uppercase; margin-top: 4px; }
+        
+        .price-tag { color: #f97316; font-weight: 800; font-size: 0.95rem; }
+        .item-row { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            padding: 8px 0; 
+            border-bottom: 1px solid rgba(255,255,255,0.05); 
+        }
+        .combo-gradient {
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.98) 0%, rgba(20, 20, 20, 0.98) 100%), 
+                        url('https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover; background-position: center;
+        }
+        .combo-card {
+            background: rgba(255, 255, 255, 0.05); border: 1px dashed rgba(255,255,255,0.2);
+            border-radius: 16px; padding: 15px; margin-bottom: 12px;
+        }
+        /* Text color overrides for categories against dark background */
+        .text-gray-500 { color: #9ca3af !important; }
+        .text-gray-400 { color: #9ca3af !important; }
+    </style>
+</head>
+<body>
+
+    <header class="relative py-20 px-4 text-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="beach.jpg" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black/70 mix-blend-multiply"></div>
+        </div>
+       <div class="relative z-10 text-white mt-8">
+    <div class="flex items-center justify-center gap-4 mb-2">
+        <div class="h-[1px] w-8 bg-gradient-to-r from-transparent to-orange-500"></div>
+        <p class="text-orange-500 text-[16px] md:text-[18px] uppercase tracking-[0.8em] font-black italic">
+            MENU
+        </p>
+        <div class="h-[1px] w-8 bg-gradient-to-l from-transparent to-orange-500"></div>
+    </div>
+    <p class="text-gray-400 text-[10px] uppercase tracking-[0.3em] font-medium">
+        Select a category to explore
+    </p>
+</div>
+    </header>
+
+    <nav class="category-nav p-2 shadow-sm overflow-x-auto">
+        <div class="flex justify-start md:justify-center gap-2 max-w-6xl mx-auto">
+            <a href="#hot" class="cat-item text-orange-400"><i class="fas fa-mug-hot"></i><span>Hot</span></a>
+            <a href="#juice" class="cat-item text-green-400"><i class="fas fa-leaf"></i><span>Juice</span></a>
+            <a href="#mojito" class="cat-item text-blue-400"><i class="fas fa-glass-martini-alt"></i><span>Mojitos</span></a>
+            <a href="#shakes" class="cat-item text-pink-400"><i class="fas fa-ice-cream"></i><span>Shakes</span></a>
+            <a href="#snacks" class="cat-item text-amber-400"><i class="fas fa-hamburger"></i><span>Snacks</span></a>
+            <a href="#combos" class="cat-item text-white bg-orange-600"><i class="fas fa-fire"></i><span>Combos</span></a>
+        </div>
+    </nav>
+
+    <main class="max-w-7xl mx-auto px-4 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+            <section id="hot" class="menu-card p-6 border-t-4 border-orange-500">
+                <h2 class="text-2xl font-black text-orange-500 uppercase mb-6 border-b-2 border-orange-900/30 pb-2">Hot Beverages</h2>
+                <div class="space-y-1 text-sm">
+                    <div class="item-row"><span>Tea</span><span class="price-tag">₹12</span></div>
+                    <div class="item-row"><span>Black Tea</span><span class="price-tag">₹15</span></div>
+                    <div class="item-row"><span>Coffee</span><span class="price-tag">₹20</span></div>
+                    <div class="item-row"><span>Black Coffee</span><span class="price-tag">₹15</span></div>
+                    <div class="item-row"><span>Lemon Tea</span><span class="price-tag">₹20</span></div>
+                    <div class="item-row"><span>Honey Lemon Tea</span><span class="price-tag">₹25</span></div>
+                    <div class="item-row"><span>Ginger Lemon Tea</span><span class="price-tag">₹25</span></div>
+                    <div class="item-row"><span>Boost</span><span class="price-tag">₹25</span></div>
+                    <div class="item-row"><span>Horlicks</span><span class="price-tag">₹25</span></div>
+                    <div class="item-row"><span>Cashew Milk</span><span class="price-tag">₹25</span></div>
+                    <div class="item-row"><span>Badam Milk</span><span class="price-tag">₹25</span></div>
+                    <div class="item-row"><span>Chukku Coffee</span><span class="price-tag">₹20</span></div>
+                </div>
+                
+                <h2 class="text-2xl font-black text-yellow-500 uppercase mt-10 mb-6 border-b-2 border-yellow-900/30 pb-2">Lemon Juices</h2>
+                <div class="space-y-1 text-sm">
+                    <div class="item-row"><span>Lemon Juice</span><span class="price-tag">₹25</span></div>
+                    <div class="item-row"><span>Grape Lime Juice</span><span class="price-tag">₹40</span></div>
+                    <div class="item-row"><span>Pine Lime Juice</span><span class="price-tag">₹40</span></div>
+                    <div class="item-row"><span>Lemon Soda</span><span class="price-tag">₹35</span></div>
+                </div>
+            </section>
+
+            <section id="juice" class="menu-card p-6 border-t-4 border-green-500">
+                <h2 class="text-2xl font-black text-green-500 uppercase mb-6 border-b-2 border-green-900/30 pb-2">Fresh Juices</h2>
+                <div class="space-y-1 text-sm">
+                    <div class="item-row"><span>Water Melon</span><span class="price-tag">₹40</span></div>
+                    <div class="item-row font-medium text-gray-400"><span>Water Melon (No Ice)</span><span class="price-tag">₹45</span></div>
+                    <div class="item-row"><span>Pineapple</span><span class="price-tag">₹50</span></div>
+                    <div class="item-row font-medium text-gray-400"><span>Pineapple (No Ice)</span><span class="price-tag">₹55</span></div>
+                    <div class="item-row"><span>Grape</span><span class="price-tag">₹60</span></div>
+                    <div class="item-row"><span>Fig</span><span class="price-tag">₹60</span></div>
+                    <div class="item-row"><span>Beetroot</span><span class="price-tag">₹50</span></div>
+                    <div class="item-row font-medium text-gray-400"><span>Beetroot (No Ice)</span><span class="price-tag">₹55</span></div>
+                    <div class="item-row"><span>Sweet Lime (Saathukudi)</span><span class="price-tag">₹60</span></div>
+                    <div class="item-row font-medium text-gray-400"><span>Sweet Lime (No Ice)</span><span class="price-tag">₹65</span></div>
+                    <div class="item-row"><span>Carrot</span><span class="price-tag">₹60</span></div>
+                    <div class="item-row font-medium text-gray-400"><span>Carrot (No Ice)</span><span class="price-tag">₹65</span></div>
+                    <div class="item-row"><span>Apple</span><span class="price-tag">₹70</span></div>
+                    <div class="item-row"><span>Pomegranate</span><span class="price-tag">₹70</span></div>
+                    <div class="item-row"><span>Red Banana</span><span class="price-tag">₹60</span></div>
+                    <div class="item-row"><span>Butter Fruit</span><span class="price-tag">₹80</span></div>
+                    <div class="item-row"><span>Dates Juice</span><span class="price-tag">₹70</span></div>
+                    <div class="item-row"><span>Strawberry (Seasonal)</span><span class="price-tag">₹70</span></div>
+                </div>
+            </section>
+
+            <section id="mojito" class="menu-card p-6 border-t-4 border-blue-500">
+                <h2 class="text-2xl font-black text-blue-500 uppercase mb-6 border-b-2 border-blue-900/30 pb-2">Mojitos</h2>
+                <div class="space-y-1 text-sm">
+                    <div class="item-row"><span>Virgin Mojito</span><span class="price-tag">₹70</span></div>
+                    <div class="item-row"><span>Mint Mojito</span><span class="price-tag">₹70</span></div>
+                    <div class="item-row"><span>Blue Mojito</span><span class="price-tag">₹80</span></div>
+                    <div class="item-row"><span>Pineapple Mojito</span><span class="price-tag">₹70</span></div>
+                    <div class="item-row"><span>Strawberry Mojito</span><span class="price-tag">₹70</span></div>
+                    <div class="item-row"><span>Green Apple Mojito</span><span class="price-tag">₹70</span></div>
+                    <div class="item-row"><span>Litchi Mojito</span><span class="price-tag">₹70</span></div>
+                    <div class="item-row"><span>Mango Mojito</span><span class="price-tag">₹70</span></div>
+                    <div class="item-row"><span>Kiwi Mojito</span><span class="price-tag">₹70</span></div>
+                </div>
+                
+                <h2 class="text-2xl font-black text-pink-500 uppercase mt-10 mb-6 border-b-2 border-pink-900/30 pb-2">Falooda</h2>
+                <div class="space-y-1 text-sm">
+                    <div class="item-row"><span>Mini Falooda</span><span class="price-tag">₹90</span></div>
+                    <div class="item-row"><span>Titanic Falooda</span><span class="price-tag">₹160</span></div>
+                    <div class="item-row"><span>Royal Falooda</span><span class="price-tag">₹170</span></div>
+                    <div class="item-row"><span>Dry Fruit Falooda</span><span class="price-tag">₹190</span></div>
+                </div>
+            </section>
+
+            <section id="shakes" class="menu-card p-6 border-t-4 border-pink-400">
+                <h2 class="text-2xl font-black text-pink-400 uppercase mb-6 border-b-2 border-pink-900/30 pb-2">Milkshakes</h2>
+                <div class="space-y-1 text-sm">
+                    <div class="item-row"><span>Dry Fruit Shake</span><span class="price-tag">₹100</span></div>
+                    <div class="item-row"><span>Oreo Shake</span><span class="price-tag">₹70</span></div>
+                    <div class="item-row"><span>Oreo Monster Shake</span><span class="price-tag">₹100</span></div>
+                    <div class="item-row"><span>Dates and Banana Shake</span><span class="price-tag">₹80</span></div>
+                    <div class="item-row"><span>Dates and Fig Shake</span><span class="price-tag">₹80</span></div>
+                    <div class="item-row"><span>Chocolate Shake</span><span class="price-tag">₹90</span></div>
+                    <div class="item-row"><span>Butterscotch Shake</span><span class="price-tag">₹90</span></div>
+                    <div class="item-row"><span>Blackcurrant Shake</span><span class="price-tag">₹90</span></div>
+                    <div class="item-row"><span>Strawberry Shake</span><span class="price-tag">₹80</span></div>
+                    <div class="item-row"><span>Cold Coffee</span><span class="price-tag">₹70</span></div>
+                    <div class="item-row"><span>Rose Milk</span><span class="price-tag">₹40</span></div>
+                    <div class="item-row"><span>Badham Milk</span><span class="price-tag">₹40</span></div>
+                    <div class="item-row"><span>Milk Sarbath</span><span class="price-tag">₹40</span></div>
+                </div>
+            </section>
+
+            <section class="menu-card p-6 border-t-4 border-amber-600">
+                <h2 class="text-2xl font-black text-amber-500 uppercase mb-6 border-b-2 border-amber-900/30 pb-2">Bread Omelette</h2>
+                <div class="space-y-1 text-sm">
+                    <div class="item-row"><span>Plain Bread Omelette</span><span class="price-tag">₹45</span></div>
+                    <div class="item-row"><span>Cheese Bread Omelette</span><span class="price-tag">₹55</span></div>
+                    <div class="item-row"><span>Cheese Corn Bread Omelette</span><span class="price-tag">₹60</span></div>
+                    <div class="item-row"><span>Chicken Bread Omelette</span><span class="price-tag">₹70</span></div>
+                    <div class="item-row"><span>Chicken Cheese Bread Omelette</span><span class="price-tag">₹80</span></div>
+                </div>
+                
+                <h2 class="text-2xl font-black text-amber-700 uppercase mt-10 mb-6 border-b-2 border-amber-900/30 pb-2">Maggie</h2>
+                <div class="space-y-1 text-sm">
+                    <div class="item-row"><span>Plain Maggie</span><span class="price-tag">₹40</span></div>
+                    <div class="item-row"><span>Cheese Maggie</span><span class="price-tag">₹55</span></div>
+                    <div class="item-row"><span>Cheese Corn Maggie</span><span class="price-tag">₹60</span></div>
+                    <div class="item-row"><span>Chicken Maggie</span><span class="price-tag">₹70</span></div>
+                    <div class="item-row"><span>Chicken Cheese Maggie</span><span class="price-tag">₹80</span></div>
+                </div>
+            </section>
+
+            <section class="menu-card p-6 border-t-4 border-purple-500">
+                <h2 class="text-2xl font-black text-purple-400 uppercase mb-6 border-b-2 border-purple-900/30 pb-2">Chats</h2>
+                <div class="space-y-1 text-sm">
+                    <div class="item-row"><span>Pani Puri (8 pes)</span><span class="price-tag">₹30</span></div>
+                    <div class="item-row"><span>Mayo Puri (6 pes)</span><span class="price-tag">₹55</span></div>
+                    <div class="item-row"><span>Cheese Puri (5 pes)</span><span class="price-tag">₹55</span></div>
+                    <div class="item-row"><span>Dahi Puri (5 pes)</span><span class="price-tag">₹55</span></div>
+                    <div class="item-row"><span>Khakara Sandwich</span><span class="price-tag">₹80</span></div>
+                    <div class="item-row"><span>Murukku Sandwich</span><span class="price-tag">₹80</span></div>
+                    <div class="item-row"><span>Corncanapy Sandwich</span><span class="price-tag">₹80</span></div>
+                </div>
+                
+                <h2 class="text-2xl font-black text-purple-700 uppercase mt-10 mb-6 border-b-2 border-purple-900/30 pb-2">Sandwiches</h2>
+                <div class="space-y-1 text-sm">
+                    <div class="item-row"><span>Plain Sandwich</span><span class="price-tag">₹40</span></div>
+                    <div class="item-row"><span>Plain Toast Sandwich</span><span class="price-tag">₹45</span></div>
+                    <div class="item-row"><span>Veg Cheese Toast</span><span class="price-tag">₹60</span></div>
+                    <div class="item-row"><span>Veg Cheese Corn Toast</span><span class="price-tag">₹70</span></div>
+                    <div class="item-row"><span>Chicken Sandwich</span><span class="price-tag">₹90</span></div>
+                    <div class="item-row"><span>Paneer Cheese Sandwich</span><span class="price-tag">₹80</span></div>
+                </div>
+            </section>
+
+            <section id="snacks" class="menu-card p-6 border-t-4 border-blue-500">
+                <h2 class="text-2xl font-black text-blue-400 uppercase mb-6 border-b-2 border-blue-900/30 pb-2">Burgers</h2>
+                <div class="space-y-1 text-sm">
+                    <div class="item-row"><span>Veg Burger</span><span class="price-tag">₹70</span></div>
+                    <div class="item-row"><span>Chicken Burger</span><span class="price-tag">₹80</span></div>
+                    <div class="item-row"><span>Paneer Burger</span><span class="price-tag">₹90</span></div>
+                    <div class="item-row font-bold text-orange-500"><span>Fried Chicken Burger</span><span class="price-tag">₹110</span></div>
+                    <div class="item-row italic text-gray-500"><span>Add Extra Cheese</span><span class="price-tag">₹15</span></div>
+                </div>
+                
+                <h2 class="text-2xl font-black text-blue-600 uppercase mt-10 mb-6 border-b-2 border-blue-900/30 pb-2">Finger Foods</h2>
+                <div class="space-y-1 text-sm">
+                    <div class="item-row"><span>French Fries (160 gram)</span><span class="price-tag">₹60</span></div>
+                    <div class="item-row"><span>Peri Peri Fries (160 gram)</span><span class="price-tag">₹70</span></div>
+                    <div class="item-row"><span>Cheese Corn Nuggets (5 pes)</span><span class="price-tag">₹70</span></div>
+                    <div class="item-row"><span>Veg Cheese Ball (5 pes)</span><span class="price-tag">₹60</span></div>
+                    <div class="item-row"><span>Veg Momos (5 pes)</span><span class="price-tag">₹60</span></div>
+                    <div class="item-row"><span>Veg Samosa (5 pes)</span><span class="price-tag">₹60</span></div>
+                    <div class="item-row"><span>Chicken Momos (5 pes)</span><span class="price-tag">₹70</span></div>
+                    <div class="item-row"><span>Chicken Nuggets (5 pes)</span><span class="price-tag">₹70</span></div>
+                    <div class="item-row"><span>Chicken Cheese Ball (5 pes)</span><span class="price-tag">₹70</span></div>
+                    <div class="item-row"><span>Chicken Popcorn (150 gram)</span><span class="price-tag">₹110</span></div>
+                    <div class="item-row"><span>Crispy Wings (4 pes)</span><span class="price-tag">₹110</span></div>
+                    <div class="item-row"><span>Chicken Strips (4 pes)</span><span class="price-tag">₹110</span></div>
+                </div>
+            </section>
+
+            <section id="combos" class="combo-gradient p-8 rounded-[2.5rem] md:col-span-2 lg:col-span-3 text-white border border-white/10">
+                <h2 class="text-4xl font-black italic uppercase text-orange-500 mb-10 text-center tracking-tighter">Value Combo Offers</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                    <div>
+                        <h3 class="text-green-400 font-bold uppercase tracking-widest mb-6 flex items-center"><i class="fas fa-leaf mr-2"></i> Veg Combos</h3>
+                        <div class="combo-card">
+                            <p class="text-orange-400 font-black">VEG COMBO 1 — ₹130</p>
+                            <p class="text-xs mt-1 text-gray-300">Veg Burger + French Fries + Coke (250ml)</p>
+                        </div>
+                        <div class="combo-card">
+                            <p class="text-orange-400 font-black">VEG COMBO 2 — ₹140</p>
+                            <p class="text-xs mt-1 text-gray-300">Veg Burger + Peri Peri Fries + Coke (250ml)</p>
+                        </div>
+                        <div class="combo-card">
+                            <p class="text-orange-400 font-black">VEG COMBO 3 — ₹220</p>
+                            <p class="text-xs mt-1 text-gray-300">Paneer Burger + Cheese Corn Nuggets + Veg Momos + Coke (250ml)</p>
+                        </div>
+                        <div class="combo-card">
+                            <p class="text-orange-400 font-black">VEG COMBO 4 — ₹260</p>
+                            <p class="text-xs mt-1 text-gray-300">French Fries + Veg Cheese Ball + Veg Samosa + Veg Momos + Coke (250ml)</p>
+                        </div>
+                        <div class="combo-card">
+                            <p class="text-orange-400 font-black">VEG COMBO 5 — ₹290</p>
+                            <p class="text-xs mt-1 text-gray-300">Paneer Burger + Veg Samosa + Veg Cheese Ball + Cheese Corn Nuggets + Coke (250ml)</p>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-red-400 font-bold uppercase tracking-widest mb-6 flex items-center"><i class="fas fa-drumstick-bite mr-2"></i> Non-Veg Combos</h3>
+                        <div class="combo-card">
+                            <p class="text-orange-400 font-black">NON-VEG COMBO 1 — ₹140</p>
+                            <p class="text-xs mt-1 text-gray-300">Chicken Burger + Peri Peri Fries + Coke (250ml)</p>
+                        </div>
+                        <div class="combo-card">
+                            <p class="text-orange-400 font-black">NON-VEG COMBO 2 — ₹220</p>
+                            <p class="text-xs mt-1 text-gray-300">Chicken Burger + Chicken Momos + Chicken Samosa + Coke (250ml)</p>
+                        </div>
+                        <div class="combo-card">
+                            <p class="text-orange-400 font-black">NON-VEG COMBO 3 — ₹250</p>
+                            <p class="text-xs mt-1 text-gray-300">Fried Chicken Burger + Chicken Cheese Ball + Chicken Nuggets + Coke (250ml)</p>
+                        </div>
+                        <div class="combo-card">
+                            <p class="text-orange-400 font-black">NON-VEG COMBO 4 — ₹300</p>
+                            <p class="text-xs mt-1 text-gray-300">French Fries + Chicken Popcorn + Chicken Nuggets + Chicken Cheese Ball + Coke (250ml)</p>
+                        </div>
+                        <div class="combo-card">
+                            <p class="text-orange-400 font-black">NON-VEG COMBO 5 — ₹350</p>
+                            <p class="text-xs mt-1 text-gray-300">Chicken Popcorn + Crispy Wings + Chicken Momos + Chicken Nuggets + Coke (250ml)</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="bg-black py-12 text-center text-[12px] text-gray-500 font-bold uppercase tracking-[0.3em] border-t border-white/5">
+        Oru Tea Sollu • Taste the Refreshment • 2025
+    </footer>
+
+</body>
+</html>
