@@ -250,15 +250,39 @@
                 </div>
             </section>
 
+            <section class="menu-card border-t-4 border-red-500">
+                <img src="Burgers.jpg" class="section-img">
+                <div class="p-6">
+                    <h2 class="text-xl font-black text-red-500 uppercase mb-4 border-b border-red-900/30 pb-2">Burgers</h2>
+                    <div class="space-y-1 text-sm">
+                        <div class="item-row"><span>Veg Burger</span><span class="price-tag">₹70</span></div>
+                        <div class="item-row"><span>Chicken Burger</span><span class="price-tag">₹80</span></div>
+                        <div class="item-row"><span>Paneer Burger</span><span class="price-tag">₹90</span></div>
+                        <div class="item-row"><span>Fried Chicken Burger</span><span class="price-tag">₹110</span></div>
+                        <div class="item-row text-xs italic text-gray-400"><span>Extra Cheese</span><span class="price-tag">₹15</span></div>
+                    </div>
+                    
+                    <h2 class="text-xl font-black text-yellow-600 uppercase mt-8 mb-4 border-b border-yellow-900/30 pb-2">Finger Foods (Veg)</h2>
+                    <div class="space-y-1 text-sm">
+                        <div class="item-row"><span>French Fries (160g)</span><span class="price-tag">₹60</span></div>
+                        <div class="item-row"><span>Peri Peri Fries (160g)</span><span class="price-tag">₹70</span></div>
+                        <div class="item-row"><span>Cheese Corn Nuggets (5pcs)</span><span class="price-tag">₹70</span></div>
+                        <div class="item-row"><span>Veg Cheese Ball (5pcs)</span><span class="price-tag">₹80</span></div>
+                        <div class="item-row"><span>Veg Momos (5pcs)</span><span class="price-tag">₹60</span></div>
+                        <div class="item-row"><span>Veg Samosa (5pcs)</span><span class="price-tag">₹60</span></div>
+                    </div>
+                </div>
+            </section>
+
             <section class="menu-card border-t-4 border-purple-500">
                 <img src="Chats.jpg" class="section-img">
                 <div class="p-6">
                     <h2 class="text-xl font-black text-purple-400 uppercase mb-4 border-b border-purple-900/30 pb-2">Chats</h2>
                     <div class="space-y-1 text-sm">
-                        <div class="item-row"><span>Pani Puri (8 pes)</span><span class="price-tag">₹30</span></div>
-                        <div class="item-row"><span>Mayo Puri (6 pes)</span><span class="price-tag">₹55</span></div>
-                        <div class="item-row"><span>Cheese Puri (5 pes)</span><span class="price-tag">₹55</span></div>
-                        <div class="item-row"><span>Dahi Puri (5 pes)</span><span class="price-tag">₹55</span></div>
+                        <div class="item-row"><span>Pani Puri (8 pcs)</span><span class="price-tag">₹30</span></div>
+                        <div class="item-row"><span>Mayo Puri (6 pcs)</span><span class="price-tag">₹55</span></div>
+                        <div class="item-row"><span>Cheese Puri (5 pcs)</span><span class="price-tag">₹55</span></div>
+                        <div class="item-row"><span>Dahi Puri (5 pcs)</span><span class="price-tag">₹55</span></div>
                         <div class="item-row"><span>Khakara Sandwich</span><span class="price-tag">₹80</span></div>
                         <div class="item-row"><span>Murukku Sandwich</span><span class="price-tag">₹80</span></div>
                         <div class="item-row"><span>Corncanapy Sandwich</span><span class="price-tag">₹80</span></div>
@@ -271,6 +295,21 @@
                         <div class="item-row"><span>Veg Cheese Corn Toast</span><span class="price-tag">₹70</span></div>
                         <div class="item-row"><span>Chicken Sandwich</span><span class="price-tag">₹90</span></div>
                         <div class="item-row"><span>Paneer Cheese Sandwich</span><span class="price-tag">₹80</span></div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="menu-card border-t-4 border-red-700">
+                <img src="https://images.unsplash.com/photo-1562967914-608f82629710?q=80&w=2073&auto=format&fit=crop" class="section-img">
+                <div class="p-6">
+                    <h2 class="text-xl font-black text-red-600 uppercase mb-4 border-b border-red-900/30 pb-2">Finger Foods (Non-Veg)</h2>
+                    <div class="space-y-1 text-sm">
+                        <div class="item-row"><span>Chicken Momos (5pcs)</span><span class="price-tag">₹70</span></div>
+                        <div class="item-row"><span>Chicken Nuggets (5pcs)</span><span class="price-tag">₹70</span></div>
+                        <div class="item-row"><span>Chicken Cheese Ball (5pcs)</span><span class="price-tag">₹70</span></div>
+                        <div class="item-row"><span>Chicken Popcorn (150g)</span><span class="price-tag">₹110</span></div>
+                        <div class="item-row"><span>Crispy Wings (4pcs)</span><span class="price-tag">₹110</span></div>
+                        <div class="item-row"><span>Chicken Strips (4pcs)</span><span class="price-tag">₹110</span></div>
                     </div>
                 </div>
             </section>
@@ -313,7 +352,6 @@
                     const targetElement = document.querySelector(targetId);
                     if (targetElement) {
                         const navHeight = document.querySelector('.category-nav').offsetHeight;
-                        // Extra 10px buffer so heading isn't touching the nav
                         const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - navHeight - 10;
                         window.scrollTo({ top: targetPosition, behavior: 'smooth' });
                     }
